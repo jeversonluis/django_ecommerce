@@ -1,0 +1,6 @@
+# created by virtualenv automatically
+_pycache_/
+*.py[cod]
+*$py.class
+*.sqlite3
+
