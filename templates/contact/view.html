@@ -8,13 +8,26 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Pagina de contato</title>
+    <title>Formulário de contato</title>
   </head>
   <body>
     <div class='text-center'>
         <h1>{{ title }}</h1>
-        <h2>{{ content }}</h2>
-        <h2>Tá funcionando perfeitamente!!!</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>{{ content }}</p>
+          <div class="col-sm-6 col-12">
+            <form method="post">{% csrf_token %}
+              <input type="text" class="form-control" name="fullname" placeholder="Digite seu nome completo">
+              <input type="email" class="form-control" name="email" placeholder="Digite seu e-mail">
+              <textarea name="content" class="form-control" placeholder="Digite seu texto aqui"></textarea>
+              <button type="submit" class="btn btn-default">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
