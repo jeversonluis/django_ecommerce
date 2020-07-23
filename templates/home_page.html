@@ -14,7 +14,16 @@
     <div class='text-center'>
         <h1>{{ title }}</h1>
         <h2>{{ content }}</h2>
-        <h2>Tá funcionando perfeitamente!!!</h2>
+    </div>
+    <div class='container'>
+        {% if request.user.is_authenticated %}
+            <div class='row'>
+                <div class='col'>
+                    <h1>Premium</h1>
+                    <p>{{ premium_content }}</p>
+                </div>
+            </div>
+        {% endif %}
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
